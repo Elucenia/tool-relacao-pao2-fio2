@@ -1,0 +1,198 @@
+{
+  "tool": {
+    "id": "relacao-pao2-fio2",
+    "title": "Relação PaO₂/FiO₂ e SDRA (Berlim)",
+    "short": "Oxigenação e gravidade da SDRA",
+    "desc": "Calcule a relação PaO₂/FiO₂ e classifique a SDRA pela definição de Berlim (leve, moderada, grave), com SpO₂/FiO₂ opcional da definição global de 2023.",
+    "lead": "Mede a eficiência da oxigenação e classifica a gravidade da síndrome do desconforto respiratório agudo pela definição de Berlim.",
+    "spec": [
+      "medicina-intensiva",
+      "medicina-de-emergencia",
+      "pneumologia",
+      "anestesiologia"
+    ],
+    "fields": [
+      [
+        "pao2",
+        "PaO₂",
+        "num",
+        {
+          "min": 20,
+          "max": 700,
+          "unit": "mmHg",
+          "ph": "80"
+        }
+      ],
+      [
+        "fio2",
+        "FiO₂",
+        "num",
+        {
+          "min": 21,
+          "max": 100,
+          "unit": "%",
+          "ph": "40"
+        }
+      ],
+      [
+        "peep",
+        "PEEP ou CPAP",
+        "num",
+        {
+          "min": 0,
+          "max": 30,
+          "unit": "cmH₂O",
+          "ph": "8",
+          "opt": true
+        }
+      ],
+      [
+        "spo2",
+        "SpO₂ (para a relação SpO₂/FiO₂)",
+        "num",
+        {
+          "min": 50,
+          "max": 100,
+          "unit": "%",
+          "ph": "92",
+          "opt": true
+        }
+      ]
+    ],
+    "formula": "<p><strong>Relação P/F</strong> = PaO₂ (mmHg) ÷ FiO₂ (em fração: 40% = 0,40).</p><p><strong>SpO₂/FiO₂</strong> = SpO₂ (%) ÷ FiO₂ (fração), interpretável com SpO₂ ≤ 97%.</p>",
+    "table": [
+      [
+        "PaO₂/FiO₂ (com PEEP ≥ 5 cmH₂O)",
+        "SDRA (Berlim, 2012)",
+        "Mortalidade na validação"
+      ],
+      [
+        "201 a 300",
+        "Leve",
+        "27%"
+      ],
+      [
+        "101 a 200",
+        "Moderada",
+        "32%"
+      ],
+      [
+        "≤ 100",
+        "Grave",
+        "45%"
+      ]
+    ],
+    "table_note": "A definição global de 2023 aceita SpO₂/FiO₂ ≤ 315 (com SpO₂ ≤ 97%) como critério de hipoxemia e inclui pacientes em cateter nasal de alto fluxo (≥ 30 L/min).",
+    "tips": [
+      "A relação P/F é só o critério de oxigenação: SDRA exige início em até 1 semana de um insulto conhecido, opacidades bilaterais e edema não explicado por insuficiência cardíaca ou hipervolemia.",
+      "A P/F varia com a PEEP e a FiO₂: compare medidas feitas nos mesmos parâmetros ventilatórios.",
+      "P/F &lt; 150 em SDRA moderada a grave é o limiar usado para indicar posição prona (estudo PROSEVA).",
+      "Em altitude, a PaO₂ é menor: alguns autores corrigem a P/F multiplicando por (pressão barométrica ÷ 760)."
+    ],
+    "sources": [
+      [
+        "ARDS Definition Task Force; Ranieri VM et al. Acute respiratory distress syndrome: the Berlin Definition. JAMA, 2012.",
+        "https://doi.org/10.1001/jama.2012.5669"
+      ],
+      [
+        "Matthay MA et al. A new global definition of acute respiratory distress syndrome. Am J Respir Crit Care Med, 2024.",
+        "https://doi.org/10.1164/rccm.202303-0558WS"
+      ]
+    ],
+    "cases": [
+      [
+        "PaO₂ 95 em ar ambiente: 452",
+        {
+          "pao2": 95,
+          "fio2": 21
+        },
+        {
+          "raw": {
+            "pf": 452.38
+          },
+          "level": "low",
+          "tol": 0.1
+        }
+      ],
+      [
+        "PaO₂ 90, FiO₂ 40%: 225, SDRA leve",
+        {
+          "pao2": 90,
+          "fio2": 40,
+          "peep": 8
+        },
+        {
+          "raw": {
+            "pf": 225
+          },
+          "level": "mid",
+          "verdict": "leve"
+        }
+      ],
+      [
+        "PaO₂ 80, FiO₂ 40%: 200, SDRA moderada (limite)",
+        {
+          "pao2": 80,
+          "fio2": 40,
+          "peep": 10
+        },
+        {
+          "raw": {
+            "pf": 200
+          },
+          "level": "high",
+          "verdict": "moderada"
+        }
+      ],
+      [
+        "PaO₂ 60, FiO₂ 80%: 75, SDRA grave; SpO₂ 90 → S/F 112,5",
+        {
+          "pao2": 60,
+          "fio2": 80,
+          "peep": 14,
+          "spo2": 90
+        },
+        {
+          "raw": {
+            "pf": 75,
+            "sf": 112.5
+          },
+          "level": "high",
+          "verdict": "grave"
+        }
+      ]
+    ],
+    "batch": "urgencia",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "urgencia",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/urgencia.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 4,
+      "passed": 4,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/urgencia.php",
+    "sha256": "b24f3a77383430c3f3463168e78e88341034b3108bd712f3613ae32672dc281c",
+    "bytes": 121059
+  },
+  "clinicalValidation": "not-performed"
+}

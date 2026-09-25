@@ -1,0 +1,87 @@
+[
+  {
+    "label": "PaO₂ 95 em ar ambiente: 452",
+    "input": {
+      "pao2": 95,
+      "fio2": 21
+    },
+    "expected": {
+      "raw": {
+        "pf": 452.38
+      },
+      "level": "low",
+      "tol": 0.1
+    },
+    "originalInput": {
+      "pao2": 95,
+      "fio2": 21
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "PaO₂ 90, FiO₂ 40%: 225, SDRA leve",
+    "input": {
+      "pao2": 90,
+      "fio2": 40,
+      "peep": 8
+    },
+    "expected": {
+      "raw": {
+        "pf": 225
+      },
+      "level": "mid",
+      "verdict": "leve"
+    },
+    "originalInput": {
+      "pao2": 90,
+      "fio2": 40,
+      "peep": 8
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "PaO₂ 80, FiO₂ 40%: 200, SDRA moderada (limite)",
+    "input": {
+      "pao2": 80,
+      "fio2": 40,
+      "peep": 10
+    },
+    "expected": {
+      "raw": {
+        "pf": 200
+      },
+      "level": "high",
+      "verdict": "moderada"
+    },
+    "originalInput": {
+      "pao2": 80,
+      "fio2": 40,
+      "peep": 10
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "PaO₂ 60, FiO₂ 80%: 75, SDRA grave; SpO₂ 90 → S/F 112,5",
+    "input": {
+      "pao2": 60,
+      "fio2": 80,
+      "peep": 14,
+      "spo2": 90
+    },
+    "expected": {
+      "raw": {
+        "pf": 75,
+        "sf": 112.5
+      },
+      "level": "high",
+      "verdict": "grave"
+    },
+    "originalInput": {
+      "pao2": 60,
+      "fio2": 80,
+      "peep": 14,
+      "spo2": 90
+    },
+    "expandedZeroOptions": []
+  }
+]
