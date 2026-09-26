@@ -1,7 +1,7 @@
 {
   "name": "@elucenia/tool-relacao-pao2-fio2",
   "version": "0.1.0",
-  "description": "Relação PaO₂/FiO₂ e SDRA (Berlim) · Elucenia: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
+  "description": "Relação PaO₂/FiO₂ e SDRA (Berlim) · ELUCENIA: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
   "keywords": [
     "elucenia",
     "medical-calculator",
