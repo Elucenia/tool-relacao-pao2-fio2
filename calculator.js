@@ -1,9 +1,11 @@
-/* ELUCENIA standalone integration. Source package metadata and rights: README.md. */
+/* tool-relacao-pao2-fio2 · Elucenia · https://github.com/Elucenia/tool-relacao-pao2-fio2
+   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+   Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"relacao-pao2-fio2","title":"Relação PaO₂/FiO₂ e SDRA (Berlim)","fields":[["pao2","PaO₂","num",{"min":20,"max":700,"unit":"mmHg","ph":"80"}],["fio2","FiO₂","num",{"min":21,"max":100,"unit":"%","ph":"40"}],["peep","PEEP ou CPAP","num",{"min":0,"max":30,"unit":"cmH₂O","ph":"8","opt":true}],["spo2","SpO₂ (para a relação SpO₂/FiO₂)","num",{"min":50,"max":100,"unit":"%","ph":"92","opt":true}]],"config":null,"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
