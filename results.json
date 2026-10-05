@@ -1,0 +1,373 @@
+{
+  "id": "relacao-pao2-fio2",
+  "at": "2026-10-05T17:30:04.669Z",
+  "adapter": {
+    "file": "apps/website/private/tool-code/relacao-pao2-fio2/calculator.js",
+    "bytes": 5455,
+    "sha256": "c3570d0860828d5542053df2d02fa2b4365c7dc4481bac8ac1b647418bde047a"
+  },
+  "cases": [
+    {
+      "name": "PaO₂ 95 em ar ambiente: 452",
+      "input": {
+        "pao2": 95,
+        "fio2": 21
+      },
+      "obtained": {
+        "id": "relacao-pao2-fio2",
+        "main": [
+          "452",
+          "mmHg"
+        ],
+        "label": "Relação PaO₂/FiO₂",
+        "raw": {
+          "pf": 452.3809523809524
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.pf",
+          "expected": 452.38,
+          "obtained": 452.3809523809524,
+          "tolerance": 0.1,
+          "difference": 0.0009523809524125681,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.pf",
+          "expected": 452.3809523809524,
+          "obtained": 452.3809523809524,
+          "tolerance": 4.523809523809524e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "452",
+          "obtained": "452",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "mmHg",
+          "obtained": "mmHg",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "PaO₂ 90, FiO₂ 40%: 225, SDRA leve",
+      "input": {
+        "pao2": 90,
+        "fio2": 40,
+        "peep": 8
+      },
+      "obtained": {
+        "id": "relacao-pao2-fio2",
+        "main": [
+          "225",
+          "mmHg"
+        ],
+        "label": "Relação PaO₂/FiO₂",
+        "raw": {
+          "pf": 225
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.pf",
+          "expected": 225,
+          "obtained": 225,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.pf",
+          "expected": 225,
+          "obtained": 225,
+          "tolerance": 2.25e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "225",
+          "obtained": "225",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "mmHg",
+          "obtained": "mmHg",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        },
+        {
+          "key": "verdict",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "PaO₂ 80, FiO₂ 40%: 200, SDRA moderada (limite)",
+      "input": {
+        "pao2": 80,
+        "fio2": 40,
+        "peep": 10
+      },
+      "obtained": {
+        "id": "relacao-pao2-fio2",
+        "main": [
+          "200",
+          "mmHg"
+        ],
+        "label": "Relação PaO₂/FiO₂",
+        "raw": {
+          "pf": 200
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.pf",
+          "expected": 200,
+          "obtained": 200,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.pf",
+          "expected": 200,
+          "obtained": 200,
+          "tolerance": 2e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "200",
+          "obtained": "200",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "mmHg",
+          "obtained": "mmHg",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        },
+        {
+          "key": "verdict",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "PaO₂ 60, FiO₂ 80%: 75, SDRA grave; SpO₂ 90 → S/F 112,5",
+      "input": {
+        "pao2": 60,
+        "fio2": 80,
+        "peep": 14,
+        "spo2": 90
+      },
+      "obtained": {
+        "id": "relacao-pao2-fio2",
+        "main": [
+          "75",
+          "mmHg"
+        ],
+        "label": "Relação PaO₂/FiO₂",
+        "raw": {
+          "pf": 75,
+          "sf": 112.5
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.pf",
+          "expected": 75,
+          "obtained": 75,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.sf",
+          "expected": 112.5,
+          "obtained": 112.5,
+          "tolerance": 0.050000010000000004,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.pf",
+          "expected": 75,
+          "obtained": 75,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.sf",
+          "expected": 112.5,
+          "obtained": 112.5,
+          "tolerance": 1.125e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "75",
+          "obtained": "75",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "mmHg",
+          "obtained": "mmHg",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        },
+        {
+          "key": "verdict",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    }
+  ],
+  "refusals": {
+    "passed": 40,
+    "failed": 0,
+    "failures": []
+  },
+  "sourceNodeBrowserVmParity": true,
+  "actualBrowserDomVerified": false,
+  "newIndependentOracle": false,
+  "currentActualR6HttpEvidence": "pending",
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}

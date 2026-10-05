@@ -5,6 +5,7 @@
     "short": "Oxigenação e gravidade da SDRA",
     "desc": "Calcule a relação PaO₂/FiO₂ e classifique a SDRA pela definição de Berlim (leve, moderada, grave), com SpO₂/FiO₂ opcional da definição global de 2023.",
     "lead": "Mede a eficiência da oxigenação e classifica a gravidade da síndrome do desconforto respiratório agudo pela definição de Berlim.",
+    "kind": "Calculadora",
     "spec": [
       "medicina-intensiva",
       "medicina-de-emergencia",
@@ -60,35 +61,6 @@
       ]
     ],
     "formula": "<p><strong>Relação P/F</strong> = PaO₂ (mmHg) ÷ FiO₂ (em fração: 40% = 0,40).</p><p><strong>SpO₂/FiO₂</strong> = SpO₂ (%) ÷ FiO₂ (fração), interpretável com SpO₂ ≤ 97%.</p>",
-    "table": [
-      [
-        "PaO₂/FiO₂ (com PEEP ≥ 5 cmH₂O)",
-        "SDRA (Berlim, 2012)",
-        "Mortalidade na validação"
-      ],
-      [
-        "201 a 300",
-        "Leve",
-        "27%"
-      ],
-      [
-        "101 a 200",
-        "Moderada",
-        "32%"
-      ],
-      [
-        "≤ 100",
-        "Grave",
-        "45%"
-      ]
-    ],
-    "table_note": "A definição global de 2023 aceita SpO₂/FiO₂ ≤ 315 (com SpO₂ ≤ 97%) como critério de hipoxemia e inclui pacientes em cateter nasal de alto fluxo (≥ 30 L/min).",
-    "tips": [
-      "A relação P/F é só o critério de oxigenação: SDRA exige início em até 1 semana de um insulto conhecido, opacidades bilaterais e edema não explicado por insuficiência cardíaca ou hipervolemia.",
-      "A P/F varia com a PEEP e a FiO₂: compare medidas feitas nos mesmos parâmetros ventilatórios.",
-      "P/F &lt; 150 em SDRA moderada a grave é o limiar usado para indicar posição prona (estudo PROSEVA).",
-      "Em altitude, a PaO₂ é menor: alguns autores corrigem a P/F multiplicando por (pressão barométrica ÷ 760)."
-    ],
     "sources": [
       [
         "ARDS Definition Task Force; Ranieri VM et al. Acute respiratory distress syndrome: the Berlin Definition. JAMA, 2012.",
@@ -162,9 +134,6 @@
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -173,17 +142,172 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T12:26:57.342Z",
+      "total": 36,
+      "passed": 36,
+      "evidencePath": "reports/review-20261003/fena-precision-amendment-candidate-final22.json",
+      "evidenceSha256": "b417ec793165e6ccdab47424b1ca011e559fad6cd1a923f35b0bf2db5aafab03",
+      "scope": "PaO2 divided by inspired oxygen fraction, with explicit percent-to-fraction conversion only. ARDS diagnostic criteria, PEEP and saturation thresholds are not approved by this arithmetic check.",
+      "source": {
+        "edition": "Matthay et al. Global ARDS definition2024; DOI10.1164/rccm.202303-0558WS",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10870872/",
+        "locator": "Indexed primary definition, arterial oxygen tension/inspired oxygen fraction ratio",
+        "access": "Primary indexed definition checked on 2026-10-04; direct PMC retrieval returned a browser check, so full table conformance is not claimed.",
+        "scope": "PaO2 divided by inspired oxygen fraction, with explicit percent-to-fraction conversion only. ARDS diagnostic criteria, PEEP and saturation thresholds are not approved by this arithmetic check."
+      },
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "Berlin ARDS 2012:PFratio 100/200/300+PEEP/contexto; SFratio componente Global Definition 2024, Sp O 2≤97",
+    "implementationVersion": "relacao-pao2-fio2@native-2026-10-03+c3570d086082",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/22797452/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Relação P/F = PaO₂ (mmHg) ÷ FiO₂ (em fração: 40% = 0,40). SpO₂/FiO₂ = SpO₂ (%) ÷ FiO₂ (fração), interpretável com SpO₂ ≤ 97%.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "pao2",
+            "label": "PaO₂",
+            "type": "num",
+            "min": 20,
+            "max": 700,
+            "unit": "mmHg",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "fio2",
+            "label": "FiO₂",
+            "type": "num",
+            "min": 21,
+            "max": 100,
+            "unit": "%",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "peep",
+            "label": "PEEP ou CPAP",
+            "type": "num",
+            "min": 0,
+            "max": 30,
+            "unit": "cmH₂O",
+            "optional": true,
+            "options": null
+          },
+          {
+            "key": "spo2",
+            "label": "SpO₂ (para a relação SpO₂/FiO₂)",
+            "type": "num",
+            "min": 50,
+            "max": 100,
+            "unit": "%",
+            "optional": true,
+            "options": null
+          }
+        ],
+        "hash": "8aa21989dbc2fb8ce70bf7d2aee751a0dcba49739c3a112111c58bf4088df706"
+      },
+      "sourceEditions": [
+        {
+          "citation": "ARDS Definition Task Force; Ranieri VM et al. Acute respiratory distress syndrome: the Berlin Definition. JAMA, 2012.",
+          "url": "https://doi.org/10.1001/jama.2012.5669",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Acute respiratory distress syndrome: the Berlin Definition.",
+            "year": "2012",
+            "firstPublicationDate": "2012-06-01",
+            "doi": "10.1001/jama.2012.5669",
+            "pmid": "22797452",
+            "journal": "JAMA",
+            "authors": "ARDS Definition Task Force, Ranieri VM, Rubenfeld GD, Thompson BT, Ferguson ND, Caldwell E, Fan E, Camporota L, Slutsky AS."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/22797452/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "d721cf0d2fe9638275c1fbf989272c4f5bc87c61c0cb9033132e3d72bac32a50",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Matthay MA et al. A new global definition of acute respiratory distress syndrome. Am J Respir Crit Care Med, 2024.",
+          "url": "https://doi.org/10.1164/rccm.202303-0558WS",
+          "class": "primary-publication-full-text-retrieved",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": true,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "A New Global Definition of Acute Respiratory Distress Syndrome.",
+            "year": "2024",
+            "firstPublicationDate": "2024-01-01",
+            "doi": "10.1164/rccm.202303-0558ws",
+            "pmid": "37487152",
+            "pmcid": "PMC10870872",
+            "journal": "American journal of respiratory and critical care medicine",
+            "authors": "Matthay MA, Arabi Y, Arroliga AC, Bernard G, Bersten AD, Brochard LJ, Calfee CS, Combes A, Daniel BM, Ferguson ND, Gong MN, Gotts JE, Herridge MS, Laffey JG, Liu KD, Machado FR, Martin TR, McAuley DF, Mercat A, Moss M, Mularski RA, Pesenti A, Qiu H, Ramakrishnan N, Ranieri VM, Riviello ED, Rubin E, Slutsky AS, Thompson BT, Twagirumugabe T, Ware LB, Wick KD."
+          },
+          "primaryPublicationUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10870872/",
+          "abstractAvailable": true,
+          "fullTextSha256": "caffecce5ddb8458e2126785b1a614c873a1c63d67407333d13116dc4effadda",
+          "abstractSha256": "b1c1f593e5277e4c3ed56a4d08e32dc2a48f46342541b09a1443e664f7d6a993",
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T12:26:57.342Z",
+        "total": 36,
+        "passed": 36,
+        "evidencePath": "reports/review-20261003/fena-precision-amendment-candidate-final22.json",
+        "scope": "PaO2 divided by inspired oxygen fraction, with explicit percent-to-fraction conversion only. ARDS diagnostic criteria, PEEP and saturation thresholds are not approved by this arithmetic check.",
+        "caseEvidence": {
+          "schema": "independentArithmeticTest.cases",
+          "recordedEvidenceSha256": "f61093315a9a96e011614686588838d9b993e7296abd88f2c5767ceee1b02c6e"
+        }
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "c3570d0860828d5542053df2d02fa2b4365c7dc4481bac8ac1b647418bde047a"
+    },
+    "limits": "A relação P/F é apenas um componente da definição de SDRA. Classificação de Berlim exige as demais condições da definição final, além dos limites de oxigenação; razão isolada não confirma SDRA. A classificação por S/F pertence à definição global posterior e requer critérios próprios, sem misturar variáveis auxiliares retiradas do rascunho de Berlim.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:03.123Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Resumo não contém toda definição final: tempo, imagem, origem do edema e suporte/PEEP mínimo. SF e definição global 2024 são fontes distintas."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/relacao-pao2-fio2/calculator.js",
+    "bytes": 5455,
+    "sha256": "c3570d0860828d5542053df2d02fa2b4365c7dc4481bac8ac1b647418bde047a"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "1193f7a40e53b2bd86901ffb10ed5650ab28f50c672aa0b454d126ce5149d628",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 36,
+      "sha256": "ee25606cda7b5baa1ee8c744243745183e1eb3138c97da0b42f1d6d646865404",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

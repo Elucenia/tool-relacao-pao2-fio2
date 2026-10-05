@@ -1,0 +1,484 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field pao2",
+    "input": {
+      "fio2": 21
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "pao2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field pao2",
+    "input": {
+      "pao2": "",
+      "fio2": 21
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "pao2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" pao2",
+    "input": {
+      "pao2": "NaN",
+      "fio2": 21
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pao2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" pao2",
+    "input": {
+      "pao2": "Infinity",
+      "fio2": 21
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pao2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" pao2",
+    "input": {
+      "pao2": "1e309",
+      "fio2": 21
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pao2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" pao2",
+    "input": {
+      "pao2": "invalid",
+      "fio2": 21
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pao2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} pao2",
+    "input": {
+      "pao2": {},
+      "fio2": 21
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pao2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true pao2",
+    "input": {
+      "pao2": true,
+      "fio2": 21
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pao2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum pao2",
+    "input": {
+      "pao2": 18,
+      "fio2": 21
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "pao2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum pao2",
+    "input": {
+      "pao2": 770,
+      "fio2": 21
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "pao2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field fio2",
+    "input": {
+      "pao2": 95
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "fio2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field fio2",
+    "input": {
+      "pao2": 95,
+      "fio2": ""
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "fio2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" fio2",
+    "input": {
+      "pao2": 95,
+      "fio2": "NaN"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "fio2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" fio2",
+    "input": {
+      "pao2": 95,
+      "fio2": "Infinity"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "fio2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" fio2",
+    "input": {
+      "pao2": 95,
+      "fio2": "1e309"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "fio2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" fio2",
+    "input": {
+      "pao2": 95,
+      "fio2": "invalid"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "fio2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} fio2",
+    "input": {
+      "pao2": 95,
+      "fio2": {}
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "fio2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true fio2",
+    "input": {
+      "pao2": 95,
+      "fio2": true
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "fio2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum fio2",
+    "input": {
+      "pao2": 95,
+      "fio2": 18.9
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "fio2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum fio2",
+    "input": {
+      "pao2": 95,
+      "fio2": 110
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "fio2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" peep",
+    "input": {
+      "pao2": 95,
+      "fio2": 21,
+      "peep": "NaN"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "peep"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" peep",
+    "input": {
+      "pao2": 95,
+      "fio2": 21,
+      "peep": "Infinity"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "peep"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" peep",
+    "input": {
+      "pao2": 95,
+      "fio2": 21,
+      "peep": "1e309"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "peep"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" peep",
+    "input": {
+      "pao2": 95,
+      "fio2": 21,
+      "peep": "invalid"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "peep"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} peep",
+    "input": {
+      "pao2": 95,
+      "fio2": 21,
+      "peep": {}
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "peep"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true peep",
+    "input": {
+      "pao2": 95,
+      "fio2": 21,
+      "peep": true
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "peep"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum peep",
+    "input": {
+      "pao2": 95,
+      "fio2": 21,
+      "peep": -1
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "peep"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum peep",
+    "input": {
+      "pao2": 95,
+      "fio2": 21,
+      "peep": 33
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "peep"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" spo2",
+    "input": {
+      "pao2": 95,
+      "fio2": 21,
+      "spo2": "NaN"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "spo2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" spo2",
+    "input": {
+      "pao2": 95,
+      "fio2": 21,
+      "spo2": "Infinity"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "spo2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" spo2",
+    "input": {
+      "pao2": 95,
+      "fio2": 21,
+      "spo2": "1e309"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "spo2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" spo2",
+    "input": {
+      "pao2": 95,
+      "fio2": 21,
+      "spo2": "invalid"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "spo2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} spo2",
+    "input": {
+      "pao2": 95,
+      "fio2": 21,
+      "spo2": {}
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "spo2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true spo2",
+    "input": {
+      "pao2": 95,
+      "fio2": 21,
+      "spo2": true
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "spo2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum spo2",
+    "input": {
+      "pao2": 95,
+      "fio2": 21,
+      "spo2": 45
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "spo2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum spo2",
+    "input": {
+      "pao2": 95,
+      "fio2": 21,
+      "spo2": 110
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "spo2"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]
