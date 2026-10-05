@@ -25,7 +25,7 @@ Serve this directory with a static HTTP server and open index.html. The demonstr
 
 Berlin ARDS 2012:PFratio 100/200/300+PEEP/contexto; SFratio componente Global Definition 2024, Sp O 2≤97
 
-results.json records fresh current source and packaged browser VM parity. Browser VM is an isolated JavaScript realm, not a real browser UI/hydration journey. The new served HTTP R6 replay is pending and will be attached only after completion. Existing synthetic source expectations are not a newly derived clinical oracle. Independent clinical and professional language approval have not been performed.
+results.json records fresh current source and packaged browser VM parity. Browser VM is an isolated JavaScript realm, not a real browser UI/hydration journey. The actual local frozen R6 HTTP replay is recorded in [evidence/served-http-r6.json](evidence/served-http-r6.json): 4 documented source cases passed, and the served calculator source hash equals this package engine. This is not a real browser journey or Hostinger production deployment confirmation. Existing synthetic source expectations are not a newly derived clinical oracle. Independent clinical and professional language approval have not been performed.
 
 ## Source and licence scope
 
