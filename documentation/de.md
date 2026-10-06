@@ -79,3 +79,37 @@ Ergebnis der Formel oder Klassifikation. Interpretation, Vorgehen und Anwendbark
 Apache-2.0 gilt nur für den ELUCENIA-Code. Die Rechte an Instrumenten, Veröffentlichungen, Übersetzungen und Daten verbleiben bei den jeweiligen Rechteinhabern. Bewahren Sie LICENSE und NOTICE auf.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Dokumentierte Ergebnisse
+
+Die folgenden Angaben bewahren die Ausgaben der Methode für synthetische Beispiele. Sie stellen keine unabhängige klinische Validierung dar.
+
+### 1
+
+Verhältnis über 300: kein Oxygenierungskriterium für ARDS
+
+
+### 2
+
+Leichtes ARDS nach dem Berlin-Kriterium (200 bis 300)
+
+Die Oxygenierung ist nur eines der Kriterien: Beginn innerhalb von bis zu 1 Woche, bilaterale Opazitäten und ein nicht durch Herzinsuffizienz oder Hypervolämie erklärbares Ödem.
+
+
+### 3
+
+Mittelgradiges ARDS nach dem Berlin-Kriterium (100 bis 200)
+
+Die Oxygenierung ist nur eines der Kriterien: Beginn innerhalb von bis zu 1 Woche, bilaterale Opazitäten und ein nicht durch Herzinsuffizienz oder Hypervolämie erklärbares Ödem.
+
+
+### 4
+
+Schweres ARDS nach dem Berlin-Kriterium (≤ 100)
+
+| Ergebnisdetails | |
+| --- | --- |
+| SpO₂/FiO₂ | 113 (≤ 315: Hypoxämiekriterium der globalen Definition von 2023) |
+
+Die Oxygenierung ist nur eines der Kriterien: Beginn innerhalb von bis zu 1 Woche, bilaterale Opazitäten und ein nicht durch Herzinsuffizienz oder Hypervolämie erklärbares Ödem.
+

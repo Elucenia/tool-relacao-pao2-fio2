@@ -79,3 +79,37 @@ Formula or classification result. Interpretation, care and applicability depend 
 Apache-2.0 applies only to ELUCENIA code. Rights to instruments, publications, translations and data remain with their respective holders. Preserve LICENSE and NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Documented results
+
+The information below preserves the method outputs for synthetic examples. It does not constitute independent clinical validation.
+
+### 1
+
+Ratio above 300: no oxygenation criterion for ARDS
+
+
+### 2
+
+Mild ARDS by the Berlin criteria (200 to 300)
+
+Oxygenation is only one of the criteria: onset within up to 1 week, bilateral opacities, and edema not explained by heart failure or hypervolemia.
+
+
+### 3
+
+Moderate ARDS by the Berlin criteria (100 to 200)
+
+Oxygenation is only one of the criteria: onset within up to 1 week, bilateral opacities, and edema not explained by heart failure or hypervolemia.
+
+
+### 4
+
+Severe ARDS by the Berlin criteria (≤ 100)
+
+| Result details | |
+| --- | --- |
+| SpO₂/FiO₂ | 113 (≤ 315: hypoxemia criterion of the 2023 global definition) |
+
+Oxygenation is only one of the criteria: onset within up to 1 week, bilateral opacities, and edema not explained by heart failure or hypervolemia.
+

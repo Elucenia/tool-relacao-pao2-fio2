@@ -1,0 +1,824 @@
+{
+  "id": "relacao-pao2-fio2",
+  "implementationVersion": "relacao-pao2-fio2@native-2026-10-05+3145990aaf43",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "PaO₂ 95 em ar ambiente: 452",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Relação acima de 300: sem critério de oxigenação para SDRA",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "PaO₂ 90, FiO₂ 40%: 225, SDRA leve",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "SDRA leve pelo critério de Berlim (200 a 300)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "A oxigenação é só um dos critérios: início em até 1 semana, opacidades bilaterais e edema não explicado por insuficiência cardíaca ou hipervolemia.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "PaO₂ 80, FiO₂ 40%: 200, SDRA moderada (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "SDRA moderada pelo critério de Berlim (100 a 200)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "A oxigenação é só um dos critérios: início em até 1 semana, opacidades bilaterais e edema não explicado por insuficiência cardíaca ou hipervolemia.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "PaO₂ 60, FiO₂ 80%: 75, SDRA grave; SpO₂ 90 → S/F 112,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "SpO₂/FiO₂",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "113 (≤ 315: critério de hipoxemia da definição global de 2023)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "SDRA grave pelo critério de Berlim (≤ 100)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "A oxigenação é só um dos critérios: início em até 1 semana, opacidades bilaterais e edema não explicado por insuficiência cardíaca ou hipervolemia.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "PaO₂ 95 em ar ambiente: 452",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Ratio above 300: no oxygenation criterion for ARDS",
+            "locale": "en",
+            "template": "documented-authored-263e218a80c7c0308713"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "PaO₂ 90, FiO₂ 40%: 225, SDRA leve",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Mild ARDS by the Berlin criteria (200 to 300)",
+            "locale": "en",
+            "template": "documented-authored-657f4488fd7b08fc5e32"
+          },
+          "note": {
+            "text": "Oxygenation is only one of the criteria: onset within up to 1 week, bilateral opacities, and edema not explained by heart failure or hypervolemia.",
+            "locale": "en",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "PaO₂ 80, FiO₂ 40%: 200, SDRA moderada (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Moderate ARDS by the Berlin criteria (100 to 200)",
+            "locale": "en",
+            "template": "documented-authored-40d0146050f9a80a932e"
+          },
+          "note": {
+            "text": "Oxygenation is only one of the criteria: onset within up to 1 week, bilateral opacities, and edema not explained by heart failure or hypervolemia.",
+            "locale": "en",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "PaO₂ 60, FiO₂ 80%: 75, SDRA grave; SpO₂ 90 → S/F 112,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "SpO₂/FiO₂",
+                "locale": "en",
+                "template": "documented-authored-9deca264425200d48ab8"
+              },
+              "value": {
+                "text": "113 (≤ 315: hypoxemia criterion of the 2023 global definition)",
+                "locale": "en",
+                "template": "documented-authored-130bb8d3de345b2a90ad",
+                "sourceNumbers": [
+                  113
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Severe ARDS by the Berlin criteria (≤ 100)",
+            "locale": "en",
+            "template": "documented-authored-b306fb738cc7f72ffca6"
+          },
+          "note": {
+            "text": "Oxygenation is only one of the criteria: onset within up to 1 week, bilateral opacities, and edema not explained by heart failure or hypervolemia.",
+            "locale": "en",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "PaO₂ 95 em ar ambiente: 452",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Relación por encima de 300: sin criterio de oxigenación para SDRA",
+            "locale": "es",
+            "template": "documented-authored-263e218a80c7c0308713"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "PaO₂ 90, FiO₂ 40%: 225, SDRA leve",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "SDRA leve según el criterio de Berlín (200 a 300)",
+            "locale": "es",
+            "template": "documented-authored-657f4488fd7b08fc5e32"
+          },
+          "note": {
+            "text": "La oxigenación es solo uno de los criterios: inicio en hasta 1 semana, opacidades bilaterales y edema no explicado por insuficiencia cardíaca o hipervolemia.",
+            "locale": "es",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "PaO₂ 80, FiO₂ 40%: 200, SDRA moderada (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "SDRA moderado según el criterio de Berlín (100 a 200)",
+            "locale": "es",
+            "template": "documented-authored-40d0146050f9a80a932e"
+          },
+          "note": {
+            "text": "La oxigenación es solo uno de los criterios: inicio en hasta 1 semana, opacidades bilaterales y edema no explicado por insuficiencia cardíaca o hipervolemia.",
+            "locale": "es",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "PaO₂ 60, FiO₂ 80%: 75, SDRA grave; SpO₂ 90 → S/F 112,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "SpO₂/FiO₂",
+                "locale": "es",
+                "template": "documented-authored-9deca264425200d48ab8"
+              },
+              "value": {
+                "text": "113 (≤ 315: criterio de hipoxemia de la definición global de 2023)",
+                "locale": "es",
+                "template": "documented-authored-130bb8d3de345b2a90ad",
+                "sourceNumbers": [
+                  113
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "SDRA grave según el criterio de Berlín (≤ 100)",
+            "locale": "es",
+            "template": "documented-authored-b306fb738cc7f72ffca6"
+          },
+          "note": {
+            "text": "La oxigenación es solo uno de los criterios: inicio en hasta 1 semana, opacidades bilaterales y edema no explicado por insuficiencia cardíaca o hipervolemia.",
+            "locale": "es",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "PaO₂ 95 em ar ambiente: 452",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Rapport supérieur à 300 : pas de critère d’oxygénation pour le SDRA",
+            "locale": "fr",
+            "template": "documented-authored-263e218a80c7c0308713"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "PaO₂ 90, FiO₂ 40%: 225, SDRA leve",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "SDRA léger selon le critère de Berlin (200 à 300)",
+            "locale": "fr",
+            "template": "documented-authored-657f4488fd7b08fc5e32"
+          },
+          "note": {
+            "text": "L’oxygénation n’est qu’un des critères : début en moins d’1 semaine, opacités bilatérales et œdème non expliqué par une insuffisance cardiaque ou une hypervolémie.",
+            "locale": "fr",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "PaO₂ 80, FiO₂ 40%: 200, SDRA moderada (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "SDRA modéré selon le critère de Berlin (100 à 200)",
+            "locale": "fr",
+            "template": "documented-authored-40d0146050f9a80a932e"
+          },
+          "note": {
+            "text": "L’oxygénation n’est qu’un des critères : début en moins d’1 semaine, opacités bilatérales et œdème non expliqué par une insuffisance cardiaque ou une hypervolémie.",
+            "locale": "fr",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "PaO₂ 60, FiO₂ 80%: 75, SDRA grave; SpO₂ 90 → S/F 112,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "SpO₂/FiO₂",
+                "locale": "fr",
+                "template": "documented-authored-9deca264425200d48ab8"
+              },
+              "value": {
+                "text": "113 (≤ 315 : critère d’hypoxémie de la définition globale de 2023)",
+                "locale": "fr",
+                "template": "documented-authored-130bb8d3de345b2a90ad",
+                "sourceNumbers": [
+                  113
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "SDRA sévère selon le critère de Berlin (≤ 100)",
+            "locale": "fr",
+            "template": "documented-authored-b306fb738cc7f72ffca6"
+          },
+          "note": {
+            "text": "L’oxygénation n’est qu’un des critères : début en moins d’1 semaine, opacités bilatérales et œdème non expliqué par une insuffisance cardiaque ou une hypervolémie.",
+            "locale": "fr",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "PaO₂ 95 em ar ambiente: 452",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Verhältnis über 300: kein Oxygenierungskriterium für ARDS",
+            "locale": "de",
+            "template": "documented-authored-263e218a80c7c0308713"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "PaO₂ 90, FiO₂ 40%: 225, SDRA leve",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Leichtes ARDS nach dem Berlin-Kriterium (200 bis 300)",
+            "locale": "de",
+            "template": "documented-authored-657f4488fd7b08fc5e32"
+          },
+          "note": {
+            "text": "Die Oxygenierung ist nur eines der Kriterien: Beginn innerhalb von bis zu 1 Woche, bilaterale Opazitäten und ein nicht durch Herzinsuffizienz oder Hypervolämie erklärbares Ödem.",
+            "locale": "de",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "PaO₂ 80, FiO₂ 40%: 200, SDRA moderada (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Mittelgradiges ARDS nach dem Berlin-Kriterium (100 bis 200)",
+            "locale": "de",
+            "template": "documented-authored-40d0146050f9a80a932e"
+          },
+          "note": {
+            "text": "Die Oxygenierung ist nur eines der Kriterien: Beginn innerhalb von bis zu 1 Woche, bilaterale Opazitäten und ein nicht durch Herzinsuffizienz oder Hypervolämie erklärbares Ödem.",
+            "locale": "de",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "PaO₂ 60, FiO₂ 80%: 75, SDRA grave; SpO₂ 90 → S/F 112,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "SpO₂/FiO₂",
+                "locale": "de",
+                "template": "documented-authored-9deca264425200d48ab8"
+              },
+              "value": {
+                "text": "113 (≤ 315: Hypoxämiekriterium der globalen Definition von 2023)",
+                "locale": "de",
+                "template": "documented-authored-130bb8d3de345b2a90ad",
+                "sourceNumbers": [
+                  113
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Schweres ARDS nach dem Berlin-Kriterium (≤ 100)",
+            "locale": "de",
+            "template": "documented-authored-b306fb738cc7f72ffca6"
+          },
+          "note": {
+            "text": "Die Oxygenierung ist nur eines der Kriterien: Beginn innerhalb von bis zu 1 Woche, bilaterale Opazitäten und ein nicht durch Herzinsuffizienz oder Hypervolämie erklärbares Ödem.",
+            "locale": "de",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "PaO₂ 95 em ar ambiente: 452",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Rapporto sopra 300: nessun criterio di ossigenazione per la ARDS",
+            "locale": "it",
+            "template": "documented-authored-263e218a80c7c0308713"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "PaO₂ 90, FiO₂ 40%: 225, SDRA leve",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ARDS lieve secondo il criterio di Berlino (200 a 300)",
+            "locale": "it",
+            "template": "documented-authored-657f4488fd7b08fc5e32"
+          },
+          "note": {
+            "text": "L’ossigenazione è solo uno dei criteri: esordio entro 1 settimana, opacità bilaterali ed edema non spiegato da insufficienza cardiaca o ipervolemia.",
+            "locale": "it",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "PaO₂ 80, FiO₂ 40%: 200, SDRA moderada (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ARDS moderata secondo il criterio di Berlino (100 a 200)",
+            "locale": "it",
+            "template": "documented-authored-40d0146050f9a80a932e"
+          },
+          "note": {
+            "text": "L’ossigenazione è solo uno dei criteri: esordio entro 1 settimana, opacità bilaterali ed edema non spiegato da insufficienza cardiaca o ipervolemia.",
+            "locale": "it",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "PaO₂ 60, FiO₂ 80%: 75, SDRA grave; SpO₂ 90 → S/F 112,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "SpO₂/FiO₂",
+                "locale": "it",
+                "template": "documented-authored-9deca264425200d48ab8"
+              },
+              "value": {
+                "text": "113 (≤ 315: criterio di ipossiemia della definizione globale 2023)",
+                "locale": "it",
+                "template": "documented-authored-130bb8d3de345b2a90ad",
+                "sourceNumbers": [
+                  113
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "ARDS grave secondo il criterio di Berlino (≤ 100)",
+            "locale": "it",
+            "template": "documented-authored-b306fb738cc7f72ffca6"
+          },
+          "note": {
+            "text": "L’ossigenazione è solo uno dei criteri: esordio entro 1 settimana, opacità bilaterali ed edema non spiegato da insufficienza cardiaca o ipervolemia.",
+            "locale": "it",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "PaO₂ 95 em ar ambiente: 452",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "النسبة فوق 300: لا يوجد معيار أكسجة لـ SDRA",
+            "locale": "ar",
+            "template": "documented-authored-263e218a80c7c0308713"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "PaO₂ 90, FiO₂ 40%: 225, SDRA leve",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "SDRA خفيف وفق معيار برلين (200 إلى 300)",
+            "locale": "ar",
+            "template": "documented-authored-657f4488fd7b08fc5e32"
+          },
+          "note": {
+            "text": "الأكسجة ليست سوى أحد المعايير: بدء خلال 1 أسبوع، وعتامات ثنائية الجانب، ووذمة لا تُفسَّر بفشل القلب أو فرط حجم الدم.",
+            "locale": "ar",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "PaO₂ 80, FiO₂ 40%: 200, SDRA moderada (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "SDRA متوسط وفق معيار برلين (100 إلى 200)",
+            "locale": "ar",
+            "template": "documented-authored-40d0146050f9a80a932e"
+          },
+          "note": {
+            "text": "الأكسجة ليست سوى أحد المعايير: بدء خلال 1 أسبوع، وعتامات ثنائية الجانب، ووذمة لا تُفسَّر بفشل القلب أو فرط حجم الدم.",
+            "locale": "ar",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "PaO₂ 60, FiO₂ 80%: 75, SDRA grave; SpO₂ 90 → S/F 112,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "SpO₂/FiO₂",
+                "locale": "ar",
+                "template": "documented-authored-9deca264425200d48ab8"
+              },
+              "value": {
+                "text": "١١٣ (≤ 315: معيار نقص الأكسجة في التعريف العالمي لعام 2023)",
+                "locale": "ar",
+                "template": "documented-authored-130bb8d3de345b2a90ad",
+                "sourceNumbers": [
+                  113
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "SDRA شديد وفق معيار برلين (≤ 100)",
+            "locale": "ar",
+            "template": "documented-authored-b306fb738cc7f72ffca6"
+          },
+          "note": {
+            "text": "الأكسجة ليست سوى أحد المعايير: بدء خلال 1 أسبوع، وعتامات ثنائية الجانب، ووذمة لا تُفسَّر بفشل القلب أو فرط حجم الدم.",
+            "locale": "ar",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "PaO₂ 95 em ar ambiente: 452",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "比值高于 300：不符合 ARDS 的氧合标准",
+            "locale": "zh",
+            "template": "documented-authored-263e218a80c7c0308713"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "PaO₂ 90, FiO₂ 40%: 225, SDRA leve",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "按柏林标准的轻度 ARDS（200 到 300）",
+            "locale": "zh",
+            "template": "documented-authored-657f4488fd7b08fc5e32"
+          },
+          "note": {
+            "text": "氧合只是标准之一：1 周内起病、双侧阴影，以及不能用心力衰竭或血容量过多解释的水肿。",
+            "locale": "zh",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "PaO₂ 80, FiO₂ 40%: 200, SDRA moderada (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "按柏林标准的中度 ARDS（100 到 200）",
+            "locale": "zh",
+            "template": "documented-authored-40d0146050f9a80a932e"
+          },
+          "note": {
+            "text": "氧合只是标准之一：1 周内起病、双侧阴影，以及不能用心力衰竭或血容量过多解释的水肿。",
+            "locale": "zh",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "PaO₂ 60, FiO₂ 80%: 75, SDRA grave; SpO₂ 90 → S/F 112,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "SpO₂/FiO₂",
+                "locale": "zh",
+                "template": "documented-authored-9deca264425200d48ab8"
+              },
+              "value": {
+                "text": "113（≤ 315：2023 年全球定义的低氧血症标准）",
+                "locale": "zh",
+                "template": "documented-authored-130bb8d3de345b2a90ad",
+                "sourceNumbers": [
+                  113
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "按柏林标准的重度 ARDS（≤ 100）",
+            "locale": "zh",
+            "template": "documented-authored-b306fb738cc7f72ffca6"
+          },
+          "note": {
+            "text": "氧合只是标准之一：1 周内起病、双侧阴影，以及不能用心力衰竭或血容量过多解释的水肿。",
+            "locale": "zh",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "PaO₂ 95 em ar ambiente: 452",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "300を超える比：ARDSの酸素化基準なし",
+            "locale": "ja",
+            "template": "documented-authored-263e218a80c7c0308713"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "PaO₂ 90, FiO₂ 40%: 225, SDRA leve",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ベルリン基準による軽症ARDS（200～300）",
+            "locale": "ja",
+            "template": "documented-authored-657f4488fd7b08fc5e32"
+          },
+          "note": {
+            "text": "酸素化は基準の1つにすぎません：1週間以内の発症、両側性陰影、心不全または循環血液量増加では説明できない浮腫。",
+            "locale": "ja",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "PaO₂ 80, FiO₂ 40%: 200, SDRA moderada (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ベルリン基準による中等症ARDS（100～200）",
+            "locale": "ja",
+            "template": "documented-authored-40d0146050f9a80a932e"
+          },
+          "note": {
+            "text": "酸素化は基準の1つにすぎません：1週間以内の発症、両側性陰影、心不全または循環血液量増加では説明できない浮腫。",
+            "locale": "ja",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "PaO₂ 60, FiO₂ 80%: 75, SDRA grave; SpO₂ 90 → S/F 112,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "SpO₂/FiO₂",
+                "locale": "ja",
+                "template": "documented-authored-9deca264425200d48ab8"
+              },
+              "value": {
+                "text": "113（≤ 315：2023年のグローバル定義における低酸素血症基準）",
+                "locale": "ja",
+                "template": "documented-authored-130bb8d3de345b2a90ad",
+                "sourceNumbers": [
+                  113
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "ベルリン基準による重症ARDS（≤ 100）",
+            "locale": "ja",
+            "template": "documented-authored-b306fb738cc7f72ffca6"
+          },
+          "note": {
+            "text": "酸素化は基準の1つにすぎません：1週間以内の発症、両側性陰影、心不全または循環血液量増加では説明できない浮腫。",
+            "locale": "ja",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "PaO₂ 95 em ar ambiente: 452",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "300 से अधिक अनुपात: ARDS के लिए ऑक्सीकरण मानदंड नहीं",
+            "locale": "hi",
+            "template": "documented-authored-263e218a80c7c0308713"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "PaO₂ 90, FiO₂ 40%: 225, SDRA leve",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "बर्लिन मानदंड के अनुसार हल्का ARDS (200 से 300)",
+            "locale": "hi",
+            "template": "documented-authored-657f4488fd7b08fc5e32"
+          },
+          "note": {
+            "text": "ऑक्सीकरण केवल एक मानदंड है: 1 सप्ताह के भीतर शुरुआत, द्विपक्षीय धुंधलापन, और ऐसा एडिमा जिसे हृदय विफलता या हाइपरवोलेमिया से नहीं समझाया जा सके।",
+            "locale": "hi",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "PaO₂ 80, FiO₂ 40%: 200, SDRA moderada (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "बर्लिन मानदंड के अनुसार मध्यम ARDS (100 से 200)",
+            "locale": "hi",
+            "template": "documented-authored-40d0146050f9a80a932e"
+          },
+          "note": {
+            "text": "ऑक्सीकरण केवल एक मानदंड है: 1 सप्ताह के भीतर शुरुआत, द्विपक्षीय धुंधलापन, और ऐसा एडिमा जिसे हृदय विफलता या हाइपरवोलेमिया से नहीं समझाया जा सके।",
+            "locale": "hi",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "PaO₂ 60, FiO₂ 80%: 75, SDRA grave; SpO₂ 90 → S/F 112,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "SpO₂/FiO₂",
+                "locale": "hi",
+                "template": "documented-authored-9deca264425200d48ab8"
+              },
+              "value": {
+                "text": "113 (≤ 315: 2023 की वैश्विक परिभाषा का हाइपोक्सेमिया मानदंड)",
+                "locale": "hi",
+                "template": "documented-authored-130bb8d3de345b2a90ad",
+                "sourceNumbers": [
+                  113
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "बर्लिन मानदंड के अनुसार गंभीर ARDS (≤ 100)",
+            "locale": "hi",
+            "template": "documented-authored-b306fb738cc7f72ffca6"
+          },
+          "note": {
+            "text": "ऑक्सीकरण केवल एक मानदंड है: 1 सप्ताह के भीतर शुरुआत, द्विपक्षीय धुंधलापन, और ऐसा एडिमा जिसे हृदय विफलता या हाइपरवोलेमिया से नहीं समझाया जा सके।",
+            "locale": "hi",
+            "template": "documented-authored-c502d32ba89014f545b9"
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}

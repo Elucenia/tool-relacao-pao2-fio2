@@ -79,3 +79,37 @@ Resultado de la fórmula o clasificación. La interpretación, la conducta y la 
 Apache-2.0 se aplica únicamente al código de ELUCENIA. Los derechos de los instrumentos, publicaciones, traducciones y datos permanecen en manos de sus respectivos titulares. Conserve LICENSE y NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+La información siguiente conserva las salidas del método para ejemplos sintéticos. No constituye una validación clínica independiente.
+
+### 1
+
+Relación por encima de 300: sin criterio de oxigenación para SDRA
+
+
+### 2
+
+SDRA leve según el criterio de Berlín (200 a 300)
+
+La oxigenación es solo uno de los criterios: inicio en hasta 1 semana, opacidades bilaterales y edema no explicado por insuficiencia cardíaca o hipervolemia.
+
+
+### 3
+
+SDRA moderado según el criterio de Berlín (100 a 200)
+
+La oxigenación es solo uno de los criterios: inicio en hasta 1 semana, opacidades bilaterales y edema no explicado por insuficiencia cardíaca o hipervolemia.
+
+
+### 4
+
+SDRA grave según el criterio de Berlín (≤ 100)
+
+| Detalles del resultado | |
+| --- | --- |
+| SpO₂/FiO₂ | 113 (≤ 315: criterio de hipoxemia de la definición global de 2023) |
+
+La oxigenación es solo uno de los criterios: inicio en hasta 1 semana, opacidades bilaterales y edema no explicado por insuficiencia cardíaca o hipervolemia.
+

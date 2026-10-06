@@ -161,7 +161,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "Berlin ARDS 2012:PFratio 100/200/300+PEEP/contexto; SFratio componente Global Definition 2024, Sp O 2≤97",
-    "implementationVersion": "relacao-pao2-fio2@native-2026-10-03+c3570d086082",
+    "implementationVersion": "relacao-pao2-fio2@native-2026-10-05+3145990aaf43",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/22797452/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -277,7 +277,35 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "c3570d0860828d5542053df2d02fa2b4365c7dc4481bac8ac1b647418bde047a"
+      "implementationHash": "3145990aaf43d0c065ef7187909c84c1cb75b2034e19a51c1ce6d870a915e926",
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "relacao-pao2-fio2@native-2026-10-03+c3570d086082",
+          "previousImplementationHash": "c3570d0860828d5542053df2d02fa2b4365c7dc4481bac8ac1b647418bde047a",
+          "implementationHash": "3145990aaf43d0c065ef7187909c84c1cb75b2034e19a51c1ce6d870a915e926",
+          "scientificBodySha256": "83f7c8e1b572024ce7745bc68538b4b2360c055822bb4d902a3f405883e238ad",
+          "metadataContractHash": "8aa21989dbc2fb8ce70bf7d2aee751a0dcba49739c3a112111c58bf4088df706",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "A relação P/F é apenas um componente da definição de SDRA. Classificação de Berlim exige as demais condições da definição final, além dos limites de oxigenação; razão isolada não confirma SDRA. A classificação por S/F pertence à definição global posterior e requer critérios próprios, sem misturar variáveis auxiliares retiradas do rascunho de Berlim.",
     "sourceLimitEvidence": {
@@ -296,15 +324,15 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/relacao-pao2-fio2/calculator.js",
-    "bytes": 5455,
-    "sha256": "c3570d0860828d5542053df2d02fa2b4365c7dc4481bac8ac1b647418bde047a"
+    "bytes": 5660,
+    "sha256": "3145990aaf43d0c065ef7187909c84c1cb75b2034e19a51c1ce6d870a915e926"
   },
-  "sourceToolSha256": "1193f7a40e53b2bd86901ffb10ed5650ab28f50c672aa0b454d126ce5149d628",
+  "sourceToolSha256": "aed96194752014e316871007594f44bea9d5fa8760dfe7367590a15662afd9fc",
   "omittedFullReferenceBanks": [
     {
       "rows": 36,
       "sha256": "ee25606cda7b5baa1ee8c744243745183e1eb3138c97da0b42f1d6d646865404",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

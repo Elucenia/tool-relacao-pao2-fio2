@@ -1,0 +1,244 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "relacao-pao2-fio2",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "3814e1e46f2ff9f2c83795f0d78c44493faf96ca",
+    "oldEngineSha256": "c3570d0860828d5542053df2d02fa2b4365c7dc4481bac8ac1b647418bde047a",
+    "currentEngineSha256": "3145990aaf43d0c065ef7187909c84c1cb75b2034e19a51c1ce6d870a915e926"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "PaO₂ 95 em ar ambiente: 452",
+      "input": {
+        "pao2": 95,
+        "fio2": 21
+      },
+      "publicOutput": {
+        "id": "relacao-pao2-fio2",
+        "main": [
+          "452",
+          "mmHg"
+        ],
+        "label": "Relação PaO₂/FiO₂",
+        "raw": {
+          "pf": 452.3809523809524
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "pf": 452.38
+        },
+        "level": "low",
+        "tol": 0.1
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "452",
+          "mmHg"
+        ],
+        "label": "Relação PaO₂/FiO₂",
+        "level": "low",
+        "verdict": "Relação acima de 300: sem critério de oxigenação para SDRA",
+        "rows": [],
+        "note": "",
+        "raw": {
+          "pf": 452.3809523809524
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "PaO₂ 90, FiO₂ 40%: 225, SDRA leve",
+      "input": {
+        "pao2": 90,
+        "fio2": 40,
+        "peep": 8
+      },
+      "publicOutput": {
+        "id": "relacao-pao2-fio2",
+        "main": [
+          "225",
+          "mmHg"
+        ],
+        "label": "Relação PaO₂/FiO₂",
+        "raw": {
+          "pf": 225
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "pf": 225
+        },
+        "level": "mid",
+        "verdict": "leve"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "225",
+          "mmHg"
+        ],
+        "label": "Relação PaO₂/FiO₂",
+        "level": "mid",
+        "verdict": "SDRA leve pelo critério de Berlim (200 a 300)",
+        "rows": [],
+        "note": "A oxigenação é só um dos critérios: início em até 1 semana, opacidades bilaterais e edema não explicado por insuficiência cardíaca ou hipervolemia.",
+        "raw": {
+          "pf": 225
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "PaO₂ 80, FiO₂ 40%: 200, SDRA moderada (limite)",
+      "input": {
+        "pao2": 80,
+        "fio2": 40,
+        "peep": 10
+      },
+      "publicOutput": {
+        "id": "relacao-pao2-fio2",
+        "main": [
+          "200",
+          "mmHg"
+        ],
+        "label": "Relação PaO₂/FiO₂",
+        "raw": {
+          "pf": 200
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "pf": 200
+        },
+        "level": "high",
+        "verdict": "moderada"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "200",
+          "mmHg"
+        ],
+        "label": "Relação PaO₂/FiO₂",
+        "level": "high",
+        "verdict": "SDRA moderada pelo critério de Berlim (100 a 200)",
+        "rows": [],
+        "note": "A oxigenação é só um dos critérios: início em até 1 semana, opacidades bilaterais e edema não explicado por insuficiência cardíaca ou hipervolemia.",
+        "raw": {
+          "pf": 200
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 3,
+      "name": "PaO₂ 60, FiO₂ 80%: 75, SDRA grave; SpO₂ 90 → S/F 112,5",
+      "input": {
+        "pao2": 60,
+        "fio2": 80,
+        "peep": 14,
+        "spo2": 90
+      },
+      "publicOutput": {
+        "id": "relacao-pao2-fio2",
+        "main": [
+          "75",
+          "mmHg"
+        ],
+        "label": "Relação PaO₂/FiO₂",
+        "raw": {
+          "pf": 75,
+          "sf": 112.5
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "pf": 75,
+          "sf": 112.5
+        },
+        "level": "high",
+        "verdict": "grave"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "75",
+          "mmHg"
+        ],
+        "label": "Relação PaO₂/FiO₂",
+        "level": "high",
+        "verdict": "SDRA grave pelo critério de Berlim (≤ 100)",
+        "rows": [
+          [
+            "SpO₂/FiO₂",
+            "113 (≤ 315: critério de hipoxemia da definição global de 2023)"
+          ]
+        ],
+        "note": "A oxigenação é só um dos critérios: início em até 1 semana, opacidades bilaterais e edema não explicado por insuficiência cardíaca ou hipervolemia.",
+        "raw": {
+          "pf": 75,
+          "sf": 112.5
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows",
+        "note"
+      ]
+    }
+  ]
+}
